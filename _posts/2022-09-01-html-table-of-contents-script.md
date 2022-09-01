@@ -10,29 +10,6 @@ tags: [powershell, html, kb, ]
 
 
 
-<div><strong>Table of Contents<a id="TOC" name="TOC"></a></strong></div>
-<ul>
-<li><a href="#Who,What,When,Where,2">Who, What, When, Where, Why</a></li>
-<li><a href="#Disclaimers3">Disclaimers</a></li>
-<li><a href="#Resources4">Resources</a></li>
-<li><a href="#TheStory5">The Story</a></li>
-
-</ul>
-<p>&nbsp; </p><p>&nbsp; </p><p>&nbsp; </p>
-
-<h2>Who, What, When, Where, Why<a id="Who,What,When,Where,2" name="Who,What,When,Where,2"></a></p>
-<p>&nbsp; </p><p>&nbsp; </p><p>&nbsp; </p>
-<p><a href="#TOC">Return to the Article Table of Contents above</a></h2>
-<p>&nbsp; </p><h2>Disclaimers<a id="Disclaimers3" name="Disclaimers3"></a></p>
-<p>&nbsp; </p><p>&nbsp; </p><p>&nbsp; </p>
-<p><a href="#TOC">Return to the Article Table of Contents above</a></h2>
-<p>&nbsp; </p><h2>Resources<a id="Resources4" name="Resources4"></a></p>
-<p>&nbsp; </p><p>&nbsp; </p><p>&nbsp; </p>
-<p><a href="#TOC">Return to the Article Table of Contents above</a></h2>
-<p>&nbsp; </p><h2>The Story<a id="TheStory5" name="TheStory5"></a></p>
-<p>&nbsp; </p><p>&nbsp; </p><p>&nbsp; </p>
-<p><a href="#TOC">Return to the Article Table of Contents above</a></h2>
-<p>&nbsp; </p>
 <br>
 
 - **Who Would This Be Of Interest To:** Web Devs and Knowledge Base Article Authors
@@ -82,6 +59,14 @@ tags: [powershell, html, kb, ]
 **The Story**
 
 I like to share knowledge, which has resulted in my writing extensive kB articles for my institution. We use TeamDynamix as our Knowledge Base, which has a markdown editor with HTML source view. As my 
+
+
+
+
+
+
+
+
 
 
 
