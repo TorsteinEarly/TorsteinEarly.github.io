@@ -21,23 +21,10 @@ tags: [powershell, html, kb, ]
 <br><br><br>
 
 <h2>Who, What, When, Where, Why<a id="Who,What,When,Where,2" name="Who,What,When,Where,2"></a></h2></p>
-            <br><br><br>
-<p><a href="#TOC">Return to the Article Table of Contents above</a>
-<p>&nbsp; </p><h2>Disclaimers<a id="Disclaimers3" name="Disclaimers3"></a></h2></p>
-            <br><br><br>
-<p><a href="#TOC">Return to the Article Table of Contents above</a>
-<p>&nbsp; </p><h2>Resources<a id="Resources4" name="Resources4"></a></h2></p>
-            <br><br><br>
-<p><a href="#TOC">Return to the Article Table of Contents above</a>
-<p>&nbsp; </p><h2>The Story<a id="TheStory5" name="TheStory5"></a></h2></p>
-            <br><br><br>
-<p><a href="#TOC">Return to the Article Table of Contents above</a>
-<p>&nbsp; </p>
-
-
-
-<br>
-
+          
+          
+          
+          
 - **Who Would This Be Of Interest To:** Web Devs and Knowledge Base Article Authors
 - **What Is This:** 
   - A PowerShell Script to convert a list of headings into HTML code for a Table of Contents with linked headings. 
@@ -47,7 +34,13 @@ tags: [powershell, html, kb, ]
   - I've made a KB article available to you so that you can share the info with others that may benifit.
   - I get to enjoy eperimenting with PowerShell, learning HTML, and now learning GitHub and GitHub.oi. 
 
-<br>
+          
+          
+          
+<br><br><br>
+            
+<p><a href="#TOC">Return to the Article Table of Contents above</a>
+<p>&nbsp; </p><h2>Disclaimers<a id="Disclaimers3" name="Disclaimers3"></a></h2></p>
 
 
 
@@ -58,7 +51,15 @@ tags: [powershell, html, kb, ]
 - ConvertTo-TitleCase function:
   - Review the $SpecialCase and $LowerCase arrays for words that require special case as well as words that typically remain lowercase.
 
-<br>
+
+
+
+<br><br><br>
+<p><a href="#TOC">Return to the Article Table of Contents above</a>
+<p>&nbsp; </p><h2>Resources<a id="Resources4" name="Resources4"></a></h2></p>
+
+
+
 
 **Resources:**
 - Scripts:
@@ -75,9 +76,9 @@ tags: [powershell, html, kb, ]
     - If you publish the KB article, be sure to edit it to your own institution standards, remove any script methods you do not want to publish, and attach text files for any script methods you do want to publish.
     - I am no master of HTML, so your milage may verry: This was generated using the TDX KB editor, which runs on Bootstrap 3.4.1. If you are having trouble making the controlls work, see the [Bootstrap Basic HTML Template](https://getbootstrap.com/docs/3.4/getting-started/#template) that I used to make the code work on GitHub for the [Example KB Detailing the Scripts and How to Run Them](assets/posts/html_toc/script_kb_example)
 
-
-
-
+<br><br><br>
+<p><a href="#TOC">Return to the Article Table of Contents above</a>
+<p>&nbsp; </p><h2>The Story<a id="TheStory5" name="TheStory5"></a></h2></p>
 
 
 
@@ -85,6 +86,17 @@ tags: [powershell, html, kb, ]
 **The Story**
 
 I like to share knowledge, which has resulted in my writing extensive kB articles for my institution. We use TeamDynamix as our Knowledge Base, which has a markdown editor with HTML source view. As my 
+
+
+
+
+
+<br><br><br>
+<p><a href="#TOC">Return to the Article Table of Contents above</a>
+<p>&nbsp; </p>
+
+
+
 
 
 
