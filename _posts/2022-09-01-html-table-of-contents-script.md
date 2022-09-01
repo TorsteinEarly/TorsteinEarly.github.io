@@ -1,11 +1,11 @@
 ---
 layout: post
-title: HTML Table of Contents Script
-subtitle: Use PowerShell to generate a Table of Contents with linked Headers for your KB articles or Website
-cover-img: /assets/img/path.jpg
+title: HTML Table of Contents
+subtitle: Use PowerShell to generate a starting shell for your KB articles or Website
+cover-img: /assets/html_toc/HTMLTOC.png
 thumbnail-img: /assets/img/thumb.png
-share-img: /assets/img/path.jpg
-tags: [books, test]
+share-img: /assets/html_toc/HTMLTOC.png
+tags: [powershell, html, kb, ]
 ---
 
 <br>
