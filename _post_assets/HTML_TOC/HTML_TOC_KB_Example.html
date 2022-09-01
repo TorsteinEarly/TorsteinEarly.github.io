@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+   
+    
+        <!-- Start HTML Table of Contents Script KB Example -->
+
+    
+    
+    
+    
+    
+<ul>
+</ul>
+
+<p><strong>Table of Contents<a id="TOC100" name="TOC100"></a></strong></p>
+
+<ul>
+	<li><a href="#theproblemwithbuilding101">The Problem with Building a Table of Contents in TDX</a></li>
+	<li><a href="#thescript102">The Script</a></li>
+	<li><a href="#howtorunthe103">How to Run the Script to Generate a Table of Contents</a></li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h2>The Problem with Building a Table of Contents in TDX<a id="theproblemwithbuilding101" name="theproblemwithbuilding101"></a></h2>
+
+<p>Need to build a table of contents for a KB Article?</p>
+
+<p>It can be quite cumbersome to add anchors and hyperlinks between the table of contents and your headers.</p>
+
+<p>This Script performs the hard work for you.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>The script takes a list of headings, like this:</strong></p>
+
+<div style="margin-left: 40px;">the problem with building a table of contents in tdx</div>
+
+<div style="margin-left: 40px;">the script</div>
+
+<div style="margin-left: 40px;">How to Run the Script to Generate a Table of Contents</div>
+
+<div>&nbsp;</div>
+
+<p><strong>And generates&nbsp;HTML&nbsp;code that can be pasted in an Article Source to create a Table of Contents and section Headings like this:</strong></p>
+
+<div class="panel panel-primary">
+<div class="panel-heading"><strong>Article Source (HTML&nbsp;Code) Example</strong><label class="pull-right gutter-bottom-none " style="font-weight: normal"><input checked="unchecked" class="btn btn-default " data-target=".IDHTMLCode" data-toggle="collapse" type="button" value=" ◄ Show/Hide " /></label></div>
+
+<div aria-expanded="false" class="panel panel-body IDHTMLCode collapse" style="height: 32px;">
+<p>&lt;div&gt;&lt;strong&gt;Table of Contents&lt;a id=&quot;TOC&quot; name=&quot;TOC&quot;&gt;&lt;/a&gt;&lt;/strong&gt;&lt;/div&gt;<br />
+&lt;ul&gt;<br />
+&lt;li&gt;&lt;a href=&quot;#theproblemwithbuilding2&quot;&gt;The Problem with Building a Table of Contents in TDX&lt;/a&gt;&lt;/li&gt;<br />
+&lt;li&gt;&lt;a href=&quot;#thescript3&quot;&gt;The Script&lt;/a&gt;&lt;/li&gt;<br />
+&lt;li&gt;&lt;a href=&quot;#HowtoRunthe4&quot;&gt;How to Run the Script to Generate a Table of Contents&lt;/a&gt;&lt;/li&gt;</p>
+
+<p>&lt;/ul&gt;<br />
+&lt;p&gt;&amp;nbsp; &lt;/p&gt;&lt;p&gt;&amp;nbsp; &lt;/p&gt;&lt;p&gt;&amp;nbsp; &lt;/p&gt;</p>
+
+<p>&lt;h2&gt;The Problem with Building a Table of Contents in TDX&lt;a id=&quot;theproblemwithbuilding2&quot; name=&quot;theproblemwithbuilding2&quot;&gt;&lt;/a&gt;&lt;/p&gt;<br />
+&lt;p&gt;&amp;nbsp; &lt;/p&gt;&lt;p&gt;&amp;nbsp; &lt;/p&gt;&lt;p&gt;&amp;nbsp; &lt;/p&gt;<br />
+&lt;p&gt;&lt;a href=&quot;#TOC&quot;&gt;Return to the Article Table of Contents above&lt;/a&gt;&lt;/h2&gt;<br />
+&lt;p&gt;&amp;nbsp; &lt;/p&gt;&lt;h2&gt;The Script&lt;a id=&quot;thescript3&quot; name=&quot;thescript3&quot;&gt;&lt;/a&gt;&lt;/p&gt;<br />
+&lt;p&gt;&amp;nbsp; &lt;/p&gt;&lt;p&gt;&amp;nbsp; &lt;/p&gt;&lt;p&gt;&amp;nbsp; &lt;/p&gt;<br />
+&lt;p&gt;&lt;a href=&quot;#TOC&quot;&gt;Return to the Article Table of Contents above&lt;/a&gt;&lt;/h2&gt;<br />
+&lt;p&gt;&amp;nbsp; &lt;/p&gt;&lt;h2&gt;How to Run the Script to Generate a Table of Contents&lt;a id=&quot;HowtoRunthe4&quot; name=&quot;HowtoRunthe4&quot;&gt;&lt;/a&gt;&lt;/p&gt;<br />
+&lt;p&gt;&amp;nbsp; &lt;/p&gt;&lt;p&gt;&amp;nbsp; &lt;/p&gt;&lt;p&gt;&amp;nbsp; &lt;/p&gt;<br />
+&lt;p&gt;&lt;a href=&quot;#TOC&quot;&gt;Return to the Article Table of Contents above&lt;/a&gt;&lt;/h2&gt;<br />
+&lt;p&gt;&amp;nbsp; &lt;/p&gt;</p>
+</div>
+</div>
+
+<div class="panel panel-primary">
+<div class="panel-heading"><strong>Article Body Example</strong><label class="pull-right gutter-bottom-none " style="font-weight: normal"><input checked="unchecked" class="btn btn-default " data-target=".IDArticleBody" data-toggle="collapse" type="button" value=" ◄ Show/Hide " /></label></div>
+
+<div aria-expanded="false" class="panel panel-body IDArticleBody collapse" style="height: 32px;">
+<div>
+<div><b><strong>Table of Contents<a id="TOC" name="TOC"></a></strong></b></div>
+
+<ul>
+	<li><a href="#theproblemwithbuilding1">The Problem with Building a Table of Contents in TDX</a></li>
+	<li><a href="#thescript2">The Script</a></li>
+	<li><a href="#howtorunthe3">How to Run the Script to Generate a Table of Contents</a></li>
+</ul>
+
+<p><b>&nbsp; </b></p>
+
+<p><b>&nbsp; </b></p>
+
+<p><b>&nbsp; </b></p>
+
+<h2>The Problem with Building a Table of Contents in TDX<a id="theproblemwithbuilding1" name="theproblemwithbuilding1"></a></h2>
+
+<p>&nbsp;</p>
+
+<p><b>&nbsp; </b></p>
+
+<p><b>&nbsp; </b></p>
+
+<p><b>&nbsp; </b></p>
+<b><!-- Add a hyperlink back to the Table of Contents above. --> </b>
+
+<p><a href="#TOC">Return to the Article Table of Contents above</a></p>
+<b> </b>
+
+<p><b>&nbsp; </b></p>
+
+<h2>The Script<a id="thescript2" name="thescript2"></a></h2>
+
+<p>&nbsp;</p>
+<b> </b>
+
+<p><b>&nbsp; </b></p>
+
+<p><b>&nbsp; </b></p>
+
+<p><b>&nbsp; </b></p>
+<b> <!-- Add a hyperlink back to the Table of Contents above. --> </b>
+
+<p><a href="#TOC">Return to the Article Table of Contents above</a></p>
+<b> </b>
+
+<p><b>&nbsp; </b></p>
+
+<h2>How to Run the Script to Generate a Table of Contents<a id="howtorunthe3" name="howtorunthe3"></a></h2>
+
+<p>&nbsp;</p>
+<b> </b>
+
+<p><b>&nbsp; </b></p>
+
+<p><b>&nbsp; </b></p>
+
+<p><b>&nbsp; </b></p>
+<b> <!-- Add a hyperlink back to the Table of Contents above. --> </b>
+
+<p><a href="#TOC">Return to the Article Table of Contents above</a></p>
+<b> </b>
+
+<p><b>&nbsp; </b></p>
+<b>&nbsp;</b></div>
+</div>
+</div>
+
+<p><br />
+&nbsp;</p>
+<!-- Add a hyperlink back to the Table of Contents above. -->
+
+<p><a href="#TOC100">Return to the Article Table of Contents above</a></p>
+
+<p>&nbsp;</p>
+
+<h2>The Script<a id="thescript102" name="thescript102"></a></h2>
+
+<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">Note: These scripts were written by SVC&nbsp;Employees. Be wary of running scripts found on the Internet&nbsp;Not written/reviewed by IT. If in doubt, Do Not Run Internet Scripts:&nbsp;have someone in IT who is familiar with the script language check it before you run it.</div>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li><strong>Attached Files:&nbsp;</strong>
+
+	<ul>
+		<li>Attached files typically show in the Top Right of the KB article.
+		<ul>
+			<li>Smaller browser windows will move these to the very bottom of the article.</li>
+		</ul>
+		</li>
+		<li>You can either View the file to copy it&#39;s contents directly from your web browser, or click the file name to download and open the file itself to copy it&#39;s contents.</li>
+	</ul>
+	</li>
+</ul>
+
+<p><img alt="" src="./../_post_assets/HTML_TOC/HTML_TOC_01_Attachments.png" style="height: 441px; width: 650px; border-width: 1px; border-style: solid;" /></p>
+
+<p>&nbsp;</p>
+
+<p><strong>Simplest Method for One Offs:</strong></p>
+
+<div class="panel panel-primary">
+<div class="panel-heading"><strong>Copy and Paste</strong><label class="pull-right gutter-bottom-none " style="font-weight: normal"><input checked="unchecked" class="btn btn-default " data-target=".IDCopy" data-toggle="collapse" type="button" value=" ◄ Show/Hide " /></label></div>
+
+<div aria-expanded="false" class="panel panel-body IDCopy collapse" style="height: 31.9886px;">
+<ol>
+	<li class="gutter-top-none">Download and Open, or View, the Copy and Paste.txt&nbsp;file (Attached to this KB article)
+	<ol>
+		<li class="gutter-top-none">Copy it&#39;s contents:
+		<ol>
+			<li class="gutter-top-none">Control + A&nbsp; on Keyboard to select all</li>
+			<li class="gutter-top-none">Control + C on Keyboard to Copy</li>
+		</ol>
+		</li>
+		<li class="gutter-top-none">Close the file or Browser Tab</li>
+	</ol>
+	</li>
+	<li class="gutter-top-none">Open Windows PowerShell:
+	<ol>
+		<li class="gutter-top-none">Right click the Start button and select Windows PowerShell&nbsp;from the context menu.</li>
+	</ol>
+	</li>
+	<li class="gutter-top-none">Paste the code copied in Step 1.1 in to the PowerShell&nbsp;window.
+	<ol>
+		<li class="gutter-top-none">Control + V on Keyboard to Paste.</li>
+	</ol>
+	</li>
+	<li class="gutter-top-none">Press enter if the code does not run on it&#39;s own.&nbsp;</li>
+</ol>
+</div>
+</div>
+
+<p>&nbsp;</p>
+
+<p><strong>Use it frequently? Create a file&nbsp;on your desktop:</strong></p>
+
+<div class="panel panel-primary">
+<div class="panel-heading"><strong>Save as a Batch File</strong><label class="pull-right gutter-bottom-none " style="font-weight: normal"><input checked="unchecked" class="btn btn-default " data-target=".IDBatch" data-toggle="collapse" type="button" value=" ◄ Show/Hide " /></label></div>
+
+<div aria-expanded="false" class="panel panel-body IDBatch collapse" style="height: 31.9886px;">
+<ol>
+	<li class="gutter-top-none">Download and open, or View, the Save As Batch File.txt&nbsp;file (Attached to this KB article)
+	<ol>
+		<li class="gutter-top-none">Copy it&#39;s contents:
+		<ol>
+			<li class="gutter-top-none">Control + A&nbsp; on Keyboard to select all</li>
+			<li class="gutter-top-none">Control + C on Keyboard to Copy</li>
+		</ol>
+		</li>
+		<li class="gutter-top-none">Close the file or Browser Tab</li>
+	</ol>
+	</li>
+	<li class="gutter-top-none">Open Notepad</li>
+	<li class="gutter-top-none">Paste the code copied in Step 1.1 in to the Notepad window.
+	<ol>
+		<li class="gutter-top-none">Control + V on Keyboard to Paste.</li>
+	</ol>
+	</li>
+	<li class="gutter-top-none">Navigate to File &gt; Save As from the top menu</li>
+	<li class="gutter-top-none">Change the Save type: to All Files</li>
+	<li class="gutter-top-none">Name the file &quot;Convert to HTML Table of Contents.bat&quot; or something similar with the .bat or .cmd&nbsp;file extension.</li>
+	<li class="gutter-top-none">Save the file to your desktop.</li>
+</ol>
+
+<p class="gutter-top-none" style="margin-left: 40px;"><img alt="" src="./../_post_assets/HTML_TOC/HTML_TOC_10_Notepad.png" /></p>
+
+<p class="gutter-top-none" style="margin-left: 40px;">&nbsp;</p>
+
+<p class="gutter-top-none" style="margin-left: 40px;">&nbsp;</p>
+
+<div class="panel panel-primary">
+<div class="panel-heading"><strong>Creating the Encoded Command</strong><label class="pull-right gutter-bottom-none " style="font-weight: normal"><input checked="unchecked" class="btn btn-default " data-target=".IDEncodedCommand" data-toggle="collapse" type="button" value=" ◄ Show/Hide " /></label></div>
+
+<div aria-expanded="false" class="panel panel-body IDEncodedCommand collapse" style="height: 31.9886px;">
+<div class="gutter-top-none" style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">
+<p>$encodedcommand = [Convert]::ToBase64String([Text.Encoding]::Unicode.GetBytes( {</p>
+
+<p>&nbsp; &nbsp;# Copy the code from Copy and Paste.txt&nbsp;(attached to this KB article) and Paste it&#39;s contents&nbsp;below</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp; &nbsp;# Copy the code from Copy and Paste.txt&nbsp;(attached to this KB article) and Paste it&#39;s contents&nbsp;above</p>
+
+<p>&nbsp;})) # End encoded command</p>
+
+<p>&nbsp; &nbsp; &nbsp;$EncodedCommand | Set-Clipboard # Copy to your clipboard. Paste between the pair of double quotation marks after -encodedcommand&nbsp;in the Save as Batch File.txt</p>
+</div>
+</div>
+</div>
+
+<p>&nbsp;</p>
+</div>
+</div>
+
+<p>&nbsp;</p>
+
+<p><strong>Or Save it to your PowerShell&nbsp;Profile&nbsp;</strong></p>
+
+<div class="panel panel-primary">
+<div class="panel-heading"><strong>Save as a Function</strong><label class="pull-right gutter-bottom-none " style="font-weight: normal"><input checked="unchecked" class="btn btn-default " data-target=".IDProfile" data-toggle="collapse" type="button" value=" ◄ Show/Hide " /></label></div>
+
+<div aria-expanded="false" class="panel panel-body IDProfile collapse" style="height: 31.9886px;">
+<p class="gutter-top-none">You can save functions within your Windows PowerShell Profile. They will be available within all Windows PowerShell&nbsp;consoles.</p>
+
+<ol>
+	<li class="gutter-top-none">Open the Save to PS Profile.txt&nbsp;file (Attached to this KB article)
+	<ol>
+		<li class="gutter-top-none">Copy it&#39;s contents:
+		<ol>
+			<li class="gutter-top-none">Control + A&nbsp; on Keyboard to select all</li>
+			<li class="gutter-top-none">Control + C on Keyboard to Copy</li>
+		</ol>
+		</li>
+		<li class="gutter-top-none">Close the file</li>
+	</ol>
+	</li>
+	<li class="gutter-top-none">Open Windows PowerShell:
+	<ol>
+		<li class="gutter-top-none">Right click the Start button, select Windows PowerShell&nbsp;from the context menu</li>
+	</ol>
+	</li>
+	<li class="gutter-top-none">Type the following command into the PowerShell&nbsp;window:
+	<ol>
+		<li class="gutter-top-none"><code>Notepad.exe&nbsp;$Profile</code></li>
+	</ol>
+	</li>
+	<li class="gutter-top-none">Click Yes if asked to create the file.</li>
+	<li class="gutter-top-none">Paste the code copied from step 1.1 above into the Notepad window.</li>
+	<li class="gutter-top-none">Save and close Notepad.&nbsp;</li>
+	<li class="gutter-top-none">Close and reopen PowerShell</li>
+	<li class="gutter-top-none">You now have a custom PowerShell&nbsp;profile that performs the following:
+	<ol>
+		<li class="gutter-top-none">The&nbsp;ConvertTo-TitleCase&nbsp;and&nbsp;ConvertTo-HTMLTableOfContents&nbsp;functions built in to subsequently opened PowerShell&nbsp;consoles.</li>
+		<li class="gutter-top-none">Custom Prompt to show:
+		<ol>
+			<li class="gutter-top-none">PowerShell&nbsp;Host: Hard Coded to PS5:
+			<ol>
+				<li class="gutter-top-none">Which is what would start when opening powershell&nbsp;as we did in step 2.1.</li>
+				<li class="gutter-top-none">If you are running a different version of PowerShell, change the code in the Prompt function accordingly.&nbsp;</li>
+			</ol>
+			</li>
+			<li class="gutter-top-none">What User opened the PowerShell&nbsp;Console: USER:thor</li>
+			<li class="gutter-top-none">Curent Working Directory: c:\Users\thor in Prompt and Window Title</li>
+			<li class="gutter-top-none">Time Stamp indicating when the previous command completed: Mon 03:34:NN PM</li>
+			<li class="gutter-top-none">Time taken to run previous command: Green 0.nn sec]</li>
+		</ol>
+		</li>
+	</ol>
+	</li>
+</ol>
+
+<p class="gutter-top-none" style="margin-left: 40px;"><img alt="" src="./../_post_assets/HTML_TOC/HTML_TOC_20_PSProfile.png" style="border-width: 1px; border-style: solid;" /></p>
+
+<p class="gutter-top-none" style="margin-left: 40px;">&nbsp;</p>
+</div>
+</div>
+
+<p>&nbsp;</p>
+
+<p><br />
+&nbsp;</p>
+<!-- Add a hyperlink back to the Table of Contents above. -->
+
+<p><a href="#TOC100">Return to the Article Table of Contents above</a></p>
+
+<h2>How to Run the Script to Generate a Table of Contents<a id="howtorunthe103" name="howtorunthe103"></a></h2>
+
+<p>&nbsp;</p>
+
+<ol>
+	<li>Run the script via your preferred method
+	<ul>
+		<li>See above at&nbsp;<a href="#thescript102">The Script</a>&nbsp;​​​​</li>
+		<li><strong>Copy and Paste Method: </strong>Paste Code directly into PowerShell</li>
+		<li><strong>Batch File Method: </strong>Double Click the batch file on your desktop</li>
+		<li><strong>Function Method: </strong>Open PowerShell&nbsp;and type ConvertTo-HTMLTableOfContents&nbsp;
+		<ol>
+			<li>You can tab twice after HTML&nbsp;to complete the command</li>
+		</ol>
+		</li>
+	</ul>
+	</li>
+	<li>Confirm if the copied text is what you want to process.&nbsp;
+	<ol>
+		<li>If not:
+		<ol>
+			<li>Copy your list to your computer clipboard</li>
+			<li>Type No in the PowerShell prompt and press enter on your keyboard to recheck your clipboard.</li>
+		</ol>
+		</li>
+		<li>Once confirmed that you have the correct list copied, type Yes in the PowerShell prompt and press enter.</li>
+	</ol>
+	</li>
+	<li>The HTML&nbsp;is automatically copied to your clipboard.&nbsp;</li>
+</ol>
+
+<p style="margin-left: 40px;"><img alt="" src="./../_post_assets/HTML_TOC/HTML_TOC_30_PSRunScript.png" /></p>
+
+<p style="margin-left: 40px;">&nbsp;</p>
+
+<ol start="4">
+	<li>Click the Source button to toggle Source View ON in the TDX&nbsp;KB article</li>
+	<li>Paste the&nbsp;HTML&nbsp;Code into the Code editor.</li>
+	<li>Click the Source button&nbsp;again to toggle Source View Off and return to the article body.</li>
+	<li>Indent any Table of Contents as required.</li>
+</ol>
+
+<p style="margin-left: 40px;"><img alt="" src="./../_post_assets/HTML_TOC/HTML_TOC_40_SourcePaste.png" style="height: 443px; width: 550px; border-width: 1px; border-style: solid;" /></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<div class="panel panel-primary">
+<div class="panel-heading"><strong>Pro Tip: You can use this to Add to a Table of Contents</strong><label class="pull-right gutter-bottom-none " style="font-weight: normal"><input checked="unchecked" class="btn btn-default " data-target=".IDAddToTOC" data-toggle="collapse" type="button" value=" ◄ Show/Hide " /></label></div>
+
+<div aria-expanded="false" class="panel panel-body IDAddToTOC collapse" style="height: 32px;">
+<ol>
+	<li class="gutter-top-none">Run the script with only the header(s) you want to add copied to your clipboard.</li>
+	<li class="gutter-top-none">Paste the HTML&nbsp;code in like normal, adding it at the very top of the KB article source.</li>
+</ol>
+
+<p class="gutter-top-none" style="margin-left: 40px;"><img alt="" src="./../_post_assets/HTML_TOC/HTML_TOC_50_SourcePaste.png" style="width: 550px; height: 182px; border-width: 1px; border-style: solid;" /></p>
+
+<p class="gutter-top-none" style="margin-left: 40px;"><img alt="" src="./../_post_assets/HTML_TOC/HTML_TOC_52_SourcePasted.png" style="width: 550px; height: 329px; border-width: 1px; border-style: solid;" /></p>
+
+<p class="gutter-top-none">&nbsp;</p>
+
+<ol start="3">
+	<li class="gutter-top-none">Back in the article Body (source toggled off), Remove the just added second &quot;Table of Contents&quot; header.</li>
+	<li class="gutter-top-none">Move the just added Table of Contents Bullet and Header to your desired locations.</li>
+</ol>
+
+<p class="gutter-top-none" style="margin-left: 40px;"><img alt="" src="./../_post_assets/HTML_TOC/HTML_TOC_54_EditBody.png" style="width: 550px; height: 608px; border-width: 1px; border-style: solid;" /></p>
+
+<p style="margin-left: 40px;"><img alt="" src="./../_post_assets/HTML_TOC/HTML_TOC_56_BodyEdited.png" /></p>
+
+<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;"><strong><em>Uber</em>-Pro Tip:</strong> As you become more familiar with the KB Source view, you can just copy those HTML&nbsp;lines you want out of the PowerShell&nbsp;window and paste them directly into the Source view exactly where you want them.</div>
+</div>
+</div>
+
+<div class="panel panel-primary">
+<div class="panel-heading"><strong>Pro Tip: Sub-Table of Contents within Section Headings</strong><label class="pull-right gutter-bottom-none " style="font-weight: normal"><input checked="unchecked" class="btn btn-default " data-target=".IDSubTOC" data-toggle="collapse" type="button" value=" ◄ Show/Hide " /></label></div>
+
+<div aria-expanded="false" class="panel panel-body IDSubTOC collapse" style="height: 32px;">
+<p>Sometimes you have complicated articles that require a sub table of contents. i.e., a separate Table of Contents under another heading.</p>
+
+<ol>
+	<li>Run the script like normal, including all headings within your list that you want to include in the sub table of contents.</li>
+	<li>Paste into the article like normal.</li>
+	<li>Indent the sub headings of the Table of Contents to indicate that they are a sub headings under a primary heading.</li>
+</ol>
+
+<p style="margin-left: 40px;"><img alt="" src="./../_post_assets/HTML_TOC/HTML_TOC_60_IndentHeadings.png"" style="width: 550px; height: 316px; border-width: 1px; border-style: solid;" /></p>
+
+<p>&nbsp;</p>
+
+<ol start="4">
+	<li>Copy the indented sub headings out of the table of contents and paste them under the primary heading for which they are a sub table of contents</li>
+</ol>
+
+<p style="margin-left: 40px;"><img alt="" src="./../_post_assets/HTML_TOC/HTML_TOC_62_IndentTOC.png" style="height: 241px; width: 550px; border-width: 1px; border-style: solid;" /></p>
+
+<p>&nbsp;</p>
+
+<ol start="5">
+	<li>Copy the primary heading out of the Table of Contents and paste it under the &quot;Return to Table of Contents Above&quot; &quot;footer&quot; at the end of one of the&nbsp;Sub Headings.
+	<ol start="1" style="list-style-type: lower-roman;">
+		<li>Edit the hyperlink to show a display text of &quot;Return to [Primary Heading Here]&quot;.</li>
+		<li>Copy and paste this under each sub heading, right below or above the &quot;Return to the Article Table of Contents above link &quot;footer&quot;.</li>
+	</ol>
+	</li>
+</ol>
+
+<p style="margin-left: 40px;"><img alt="" src="./../_post_assets/HTML_TOC/HTML_TOC_64_SectionFooter.png" style="width: 550px; height: 240px; border-width: 1px; border-style: solid;" /></p>
+</div>
+</div>
+
+<p>&nbsp;</p>
+<!-- Add a hyperlink back to the Table of Contents above. -->
+
+<p><a href="#TOC100">Return to the Article Table of Contents above</a></p>
+
+<p>&nbsp;</p>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+            <!-- End HTML Table of Contents Script KB Example -->
+
+    
+    
+    
+    
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+  </body>
+</html>
