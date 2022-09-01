@@ -2,9 +2,9 @@
 layout: post
 title: HTML Table of Contents
 subtitle: Use PowerShell to generate a starting shell for your KB articles or Website
-cover-img: /assets/html_toc/HTMLTOC
+cover-img: ./../assets/posts/html_toc/HTMLTOC.png
 thumbnail-img: /assets/img/thumb.png
-share-img: /assets/html_toc/HTMLTOC
+share-img: ./../assets/posts/html_toc/HTMLTOC.png
 tags: [powershell, html, kb, ]
 ---
 
