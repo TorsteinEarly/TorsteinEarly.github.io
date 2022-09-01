@@ -176,6 +176,8 @@ Copied to clipboard - Please paste into the article source.
 " -ForegroundColor yellow
     Pause
 }
+
+            # this line is what actually runs the function. You would remove it if you are saving the functions in your profile.
 ConvertTo-HTMLTableOfContents
 
 
