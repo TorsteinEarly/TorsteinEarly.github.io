@@ -1,0 +1,7 @@
+REM Copy Code Below
+
+
+powershell.exe -executionpolicy bypass -encodedcommand ""
+
+
+REM Copy Code Above
