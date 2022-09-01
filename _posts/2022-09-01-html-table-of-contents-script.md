@@ -10,7 +10,7 @@ tags: [powershell, html, kb, ]
 
 
 
-<div><strong>Table of Contents<a id="TOC" name="TOC"></a></strong></div>
+<div><strong>Table of Contents to Rule All Table of Contents<a id="TOC" name="TOC"></a></strong></div>
 <ul>
 <li><a href="#Who,What,When,Where,2">Who, What, When, Where, Why</a></li>
 <li><a href="#Disclaimers3">Disclaimers</a></li>
@@ -21,47 +21,37 @@ tags: [powershell, html, kb, ]
 <br><br><br>
 
 <h2>Who, What, When, Where, Why<a id="Who,What,When,Where,2" name="Who,What,When,Where,2"></a></h2></p>
-          
-          
-          
-          
-- **Who Would This Be Of Interest To:** Web Devs and Knowledge Base Article Authors
-- **What Is This:** 
-  - A PowerShell Script to convert a list of headings into HTML code for a Table of Contents with linked headings. 
+- **Who:** Web Devs and Knowledge Base Article Authors
+- **What:** 
+  - A PowerShell Script for making HTML Table of Contents.
+  - In goes a list of headings | Out goes HTML code for a Table of Content and coroponding linked/anchored Section Headings. 
   - [See this Walkthrough explaining how it works](assets/posts/html_toc/script_kb_example)
-- **Why Should We Care:** 
+- **Why:** 
   - It saves you time that would otherwise be spent on formatting, copying, pasting, anchoring, linking, multiple times over multiple headings. 
-  - I've made a KB article available to you so that you can share the info with others that may benifit.
-  - I get to enjoy eperimenting with PowerShell, learning HTML, and now learning GitHub and GitHub.oi. 
-
-          
+  - I've made a KB article template available to you so that you can share the info with others that may benefit.
+  - I get to enjoy experimenting with PowerShell, learning HTML, and now learning GitHub and GitHub.oi. 
           
           
 <br><br><br>
             
 <p><a href="#TOC">Return to the Article Table of Contents above</a>
+          
 <p>&nbsp; </p><h2>Disclaimers<a id="Disclaimers3" name="Disclaimers3"></a></h2></p>
 
-
-
-***Disclaimers:*** 
 - You are now entering *PowerShell Land.* 
   - If you are unfamiliar with PowerShell or scripting in general, plaese have someone who is reivew this before using at your institution. 
   - The code is working well within my environment, both for TDX KB Articles and for GitHub HTML Pages, but I have not tested it elseware: I consider myself a novice-to-intermidiate with PowerShell, and would appreciate any feedback or bugs you encounter.
 - ConvertTo-TitleCase function:
   - Review the $SpecialCase and $LowerCase arrays for words that require special case as well as words that typically remain lowercase.
-
-
-
+- You can in fact paste the raw HTML code into Github among markdown code. 
+  - The Return to TOC links do not look to work within Preview, but they do work live once changes are commited. 
 
 <br><br><br>
 <p><a href="#TOC">Return to the Article Table of Contents above</a>
+          
+          
 <p>&nbsp; </p><h2>Resources<a id="Resources4" name="Resources4"></a></h2></p>
 
-
-
-
-**Resources:**
 - Scripts:
   - [Copy and Paste in to a PowerShell Console ](assets/posts/html_toc/copy_and_paste)
   - [Create a Batch File](assets/posts/html_toc/save_as_batch_file)
@@ -78,12 +68,9 @@ tags: [powershell, html, kb, ]
 
 <br><br><br>
 <p><a href="#TOC">Return to the Article Table of Contents above</a>
+          
 <p>&nbsp; </p><h2>The Story<a id="TheStory5" name="TheStory5"></a></h2></p>
 
-
-
-
-**The Story**
 
 I like to share knowledge, which has resulted in my writing extensive kB articles for my institution. We use TeamDynamix as our Knowledge Base, which has a markdown editor with HTML source view. As my 
 
