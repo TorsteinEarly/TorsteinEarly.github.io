@@ -3,7 +3,7 @@ layout: post
 title: HTML Table of Contents
 subtitle: Use PowerShell to generate a starting shell for your KB articles or Website
 cover-img: /assets/img/ThePower.jpg
-thumbnail-img: /assets/img/ThePower.jpg
+thumbnail-img: /assets/img/ThePowerCropped.jpg
 share-img: /assets/img/ThePower.jpg
 tags: [powershell, html, kb, ]
 ---
