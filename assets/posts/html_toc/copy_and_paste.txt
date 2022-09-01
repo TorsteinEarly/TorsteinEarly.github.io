@@ -1,0 +1,182 @@
+
+# Copy Code Below
+
+
+Function ConvertTo-TitleCase {
+    [CmdletBinding()]
+    Param(
+        [Parameter(ValueFromPipeline)]
+        $Words
+    )
+    #Check for pipeline, otherwise get from clipboard.
+    if ($PSCmdlet.MyInvocation.ExpectingInput) {
+        # get pipeline input
+        $Words = $($words).split( [System.Environment]::IsNullOrWhiteSpace )
+    } # End Run Via Pipe
+    else {
+        $NL = [system.environment]::newline
+        do {
+            Clear-Host
+            $Words = $(Get-Clipboard).split( [System.Environment]::IsNullOrWhiteSpace )
+            Write-Host $NL$Words -ForegroundColor Yellow
+            $Continue = Read-Host '
+Your clipboard contains the yellow above text (You may need to scroll up).
+Is that the list you want to convert to to Title Case?
+If Not, please first copy the Title to your clipboard before continuing.
+Then type yes or no and press enter.
+        Yes:    Process the current yellow Title above.
+        No:     Copy the Title first, then type No and press Enter to ask this question again.
+Type yes or no and press enter'
+        } until ( $Continue -in "Yes", "Ye", "Y", "YS" )
+    } # End Run At Host
+    # Define special and lower case words and the function to process them with special characters.
+    $SpecialCase = "MacOS", "ConfigMgr", "iOS", "WiFi", "ctcLink", "2FA", "eMail", "OSDBuilder", "WinPE",
+    "SVC", "TDX", "pxe", "usb", "KB", "SOP", "JAMF", "MFA", "AVAYA", "AVAYA IX", "AKA", "iPod", "iMac", "iPhone",
+    "ACOM", "BIOS", "UEFI", "MAK", "PC", "VNC", "iPadOS", "VPN", "RDP", "IP", "OCIO"
+    $LowerCase = "in", "on", "the", "a" , "an" , "nor", "or", "so", "yet", "and", "if", "etc", "with",
+    "but", 'at', 'by', 'off', 'per', 'to', 'up', 'via', 'for', 'is', 'of', "ie", "as"
+    Function Invoke-SpecialCase {
+        $CaseList = switch ( $ThisWordAlphaNumeric ) {
+            { $PSitem -in $SpecialCase } { $SpecialCase }
+            { $PSitem -in $LowerCAse } { $LowerCase }
+            { $PSitem -in $LowerCAse -And $PSitem -in $SpecialCase } {
+                Write-Error "Opps, a word is in both the Special case and Lower case lists. Please fix this so it's only in one. [ $Word ]"
+                exit
+            } # End error
+        } # End Switch
+        # These words should be special case: Override Title case and  Get their case from the list.
+        $ThisWordANSpecialCase = $CaseList | Where-Object { $PSitem -like $ThisWordAlphaNumeric }
+        if ( $ThisWordSpecialCharacters.keys -GT 0 ) {
+            # Add the special characters back in to the word
+            $ThisSpecialWord = $ThisWordANSpecialCase
+            for ($i = 0; $i -ne ( $ThisWord.ToCharArray().Count ) ; $i++) {
+                # each $i represents a character in the original word. Get the characters that are special.
+                if (  $ThisWordSpecialCharacters[$i] ) {
+                    $CharBefore = ( $ThisSpecialWord[0..$($i - 1)] -join " ").replace(" ", "")
+                    $CharAfter = ($ThisSpecialWord[$($i )..$( $ThisSpecialWord.ToCharArray().count + 1)] -join " ").replace(" ", "")
+                    $ThisSpecialWord = (
+                        $CharBefore +
+                        $ThisWordSpecialCharacters[$i] +
+                        $CharAfter
+                    ) -Join " "
+                } # End if i match a special character
+            } # End For each i in the characters of this word
+            $ThisSpecialWord # Output this word to add to the Title
+            # Remove special characters to prevent them from getting set on other words
+            $ThisWordSpecialCharacters.Clear()
+        } # End If this word has special characters.
+        else { $ThisWordANSpecialCase } # Output this word to the Title
+    } # End Special Case Function
+    # Process the case work
+    $result = $(
+        for ( $index = 0; $index -lt $words.count; $index++) {
+            $ThisWord = $Words[$index]
+            $ThisWordAlphaNumeric = $ThisWord -Replace '[^\p{L}\p{Nd}]', ''
+            # Look for special characters
+            if ( $ThisWord -match '[^\p{L}\p{Nd}]' ) {
+                # Rebuild the hash table to prevent duplicate keys from previous runs.
+                $ThisWordSpecialCharacters = @{}
+                for ($i = 0; $i -ne ( $ThisWord.ToCharArray().Count) ; $i++) {
+                    if ( $ThisWord.ToCharArray()[$i] -match '[^\p{L}\p{Nd}]') {
+                        $ThisWordSpecialCharacters.Add( $i, $ThisWord.ToCharArray()[$i])
+                    }
+                } # End For character array
+            } # End if word has special characters
+            $LastWord = $Words[$index - 1]
+            # Do the case work
+            If ( $ThisWordAlphaNumeric -in $SpecialCase ) { $ThisWordAlphaNumeric | Invoke-SpecialCase }
+            ElseIf (
+                # Title Case: Cap words that are the first word in a sentence and the last word in the title.
+                $index -eq 0 -or # First word in Title
+                $LastWord -Match '.', '!', ':' -or # First word in a sentence.
+                $index -eq $( $words.count - 1 ) -or # Last word in Title
+                $ThisWordAlphaNumeric -NOTin $LowerCase # Don't cap lower case unless it is first/last in sentence/Title.
+            ) { (Get-Culture).TextInfo.ToTitleCase(  $ThisWord  ) } # Cap the first letter in this word and output it
+            ElseIf ( $ThisWordAlphaNumeric -in $LowerCase ) { $ThisWordAlphaNumeric | Invoke-SpecialCase }
+            Else {
+                $ThisWord # Output this word to the Title
+                Write-Host "Warning: Found a word that did not match a known case rule: $ThisWord...
+                    This should really not be possible..." -ForegroundColor red
+            }
+        } # End for Words loop
+    ) -join " " # End $Results variable, and join the words back together in a string before defining the variable.
+    #Check for pipeline, otherwise set clipboard
+    if ($PSCmdlet.MyInvocation.ExpectingInput) { $Result } # Output back to pipe
+    else {
+        Write-Host "
+        Copied to Clipboard:
+        $Result" -ForegroundColor Yellow
+        $Result | Set-Clipboard
+    } # End Output
+} # End Title Case function
+Function ConvertTo-HTMLTableOfContents {
+    $NL = [system.environment]::newline
+    do {
+        Clear-Host
+        $InputStuff =
+        if ( (Get-Clipboard) -is [array] ) { Get-Clipboard }
+        else { (Get-Clipboard).split( $NL ) | Where-Object { -NOT [String]::IsNullOrWhiteSpace( $PSitem ) } }
+        Write-Host $NL$( $InputStuff | Out-String )  -ForegroundColor Yellow
+        $Continue = Read-Host '
+Your clipboard contains the yellow above text (You may need to scroll up).
+Is that the list you want to convert to an HTML Table of Contents and Headings?
+If Not, please first copy the list of Headings to your clipboard before continuing.
+        The Heading list should be separated by new lines like
+            the problem with building a table of contents in tdx
+            the script
+            How to Run the Script to Generate a Table of Contents
+Then type yes or no and press enter.
+    Yes:    Process the current yellow list above.
+    No:     Copy the list first, then type No and press Enter to ask this question again.
+Type yes or no and press enter'
+    } until ( $Continue -in "Yes", "Ye", "Y", "YS" )
+    [String]$TableOfContents = "" ; [String]$Headers = ""  ; [int]$TagCount = 1
+    $InputStuff | ForEach-Object {
+        # Only generate source code for text; skip blank lines.
+        if ( -NOT [string]::IsNullOrWhiteSpace( $PSitem ) ) {
+            # Get the tag name from the first 4 words and a number to prevent duplicates
+            $TagCount ++        # Increment the tag count
+            $TagName = (        # Set tag name: Everything after this is populating this variable
+            ($PSitem.Trim(  # remove leading whitespace
+                ).Split(" "     # Separate words by spaces
+                )[0..3]         # Select the first 4 words
+            ) | Out-String  # Output as a string
+            ).replace( $NL, ""  # Reconnect the split words
+            ).trim(             # No, really remove all the spaces
+            ) + $( $TagCount |  # Add the number to prevent duplicates
+                Out-String      # but add it as a string not a number
+            ).trim() # Finally Trim the last whitespace and End Tag Name
+            $HeaderName = $PSitem.Trim()  | ConvertTo-TitleCase
+            # Populate the table of contents for this list item. Includes Hyperlink to Header Tags.
+            $TableOfContents += "<li><a href=`"#$TagName`">$HeaderName</a></li>
+"
+            # Populate the Header with this tag item.
+            $Headers += "<h2>$HeaderName<a id=`"$TagName`" name=`"$TagName`"></a></p>
+<p>&nbsp; </p><p>&nbsp; </p><p>&nbsp; </p>
+<p><a href=`"#TOC`">Return to the Article Table of Contents above</a></h2>
+<p>&nbsp; </p>"
+        } # End if Not Whitespace
+    } # End ForEach-Object
+    # Add Header and formatting to the table of contents.
+    $TableOfContents =
+    "<div><strong>Table of Contents<a id=`"TOC`" name=`"TOC`"></a></strong></div>",
+    "<ul>",
+    $TableOfContents,
+    "</ul>",
+    "<p>&nbsp; </p><p>&nbsp; </p><p>&nbsp; </p>" | Out-String
+    $Output = $TableOfContents, $Headers
+    # Copy it to clipboard
+    $Output | Set-Clipboard
+    Write-Host "
+        Copied to clipboard:
+$( Get-Clipboard | Out-String )
+" -ForegroundColor cyan
+    Write-Host "
+Copied to clipboard - Please paste into the article source.
+" -ForegroundColor yellow
+    Pause
+}
+ConvertTo-HTMLTableOfContents
+
+
+# Copy Code Above
