@@ -21,6 +21,7 @@ tags: [powershell, html, kb, ]
 <br><br><br>
 
 <h2>Who, What, When, Where, Why<a id="Who,What,When,Where,2" name="Who,What,When,Where,2"></a></h2></p>
+
 - **Who:** Web Devs and Knowledge Base Article Authors
 - **What:** 
   - A PowerShell Script for making HTML Table of Contents.
@@ -39,12 +40,15 @@ tags: [powershell, html, kb, ]
 <p>&nbsp; </p><h2>Disclaimers<a id="Disclaimers3" name="Disclaimers3"></a></h2></p>
 
 - You are now entering *PowerShell Land.* 
-  - If you are unfamiliar with PowerShell or scripting in general, plaese have someone who is reivew this before using at your institution. 
-  - The code is working well within my environment, both for TDX KB Articles and for GitHub HTML Pages, but I have not tested it elseware: I consider myself a novice-to-intermidiate with PowerShell, and would appreciate any feedback or bugs you encounter.
+  - Are you unfamiliar with PowerShell or scripting in general?
+    - Ask someone that is to review the code with you; It's a learning opportunity for you, and the institution will know that they can trust you to ask before running random scripts found on the internet ( We IT People like that 😁 )  
+  - The code is working well within my environment, both for TDX KB Articles and GitHub HTML/Markdown Pages, but I have not tested it elsewhere.
+    - The Return to TOC links do not appear to work within GitHub Markdown Preview, but they will work on the live page.
 - ConvertTo-TitleCase function:
-  - Review the $SpecialCase and $LowerCase arrays for words that require special case as well as words that typically remain lowercase.
-- You can in fact paste the raw HTML code into Github among markdown code. 
-  - The Return to TOC links do not look to work within Preview, but they do work live once changes are commited. 
+  - Review the $SpecialCase and $LowerCase arrays for words that require specific case or that typically remain lowercase.
+- I consider myself a novice-to-intermediate PowerShell user and would appreciate any feedback or bugs you encounter.
+
+
 
 <br><br><br>
 <p><a href="#TOC">Return to the Article Table of Contents above</a>
@@ -55,16 +59,16 @@ tags: [powershell, html, kb, ]
 - Scripts:
   - [Copy and Paste in to a PowerShell Console ](assets/posts/html_toc/copy_and_paste)
   - [Create a Batch File](assets/posts/html_toc/save_as_batch_file)
-    - This is a PowerShell script that you will run to generate the batch file commands; The batch file requires an encoded command, so you get to encode it yourself as I belive that allows you to review the code and feel more secure. 
-    - The script is essentially the encoding commands wrapped arround the Copy and Paste script.
-    - You would then save it's output, which is coppied to your computer clipboard, to a "Save as Batch File.txt" file that you can attach to the KB. Or, if you are only performing this to yourself, just save the output as a batch file.
+    - This is a PowerShell script that you will run to generate the batch file commands; The batch file requires an encoded command, so you get to encode it yourself as I believe that allows you to review the code and feel more secure. 
+    - The script is essentially the encoding commands wrapped around the Copy and Paste script.
+    - You would then save its output, which is copied to your computer clipboard, to a "Save as Batch File.txt" file that you can attach to the KB. Or, if you are only performing this to yourself, just save the output as a batch file.
   - [Save the functions to your PowerShell Profile](assets/posts/html_toc/save_to_psprofile)
 - Walk Through KB Article
   - [Example KB Detailing the Scripts and How to Run Them](assets/posts/html_toc/script_kb_example)
   - [KB Template for you to save in your own KB](assets/posts/html_toc/kb_html_template)
     - Same as the above Example KB, but raw HTML.
-    - If you publish the KB article, be sure to edit it to your own institution standards, remove any script methods you do not want to publish, and attach text files for any script methods you do want to publish.
-    - I am no master of HTML, so your milage may verry: This was generated using the TDX KB editor, which runs on Bootstrap 3.4.1. If you are having trouble making the controlls work, see the [Bootstrap Basic HTML Template](https://getbootstrap.com/docs/3.4/getting-started/#template) that I used to make the code work on GitHub for the [Example KB Detailing the Scripts and How to Run Them](assets/posts/html_toc/script_kb_example)
+    - If you publish the KB article, be sure to edit it to your own institution's standards, remove any script methods you do not want to publish, and attach text files for any script methods you do want to publish.
+    - I am no master of HTML, so your mileage may vary: This was generated using the TDX KB editor, which runs on Bootstrap 3.4.1. If you are having trouble making the controls work, see the [Bootstrap Basic HTML Template](https://getbootstrap.com/docs/3.4/getting-started/#template) that I used to make the code work on GitHub for the [Example KB Detailing the Scripts and How to Run Them](assets/posts/html_toc/script_kb_example)
 
 <br><br><br>
 <p><a href="#TOC">Return to the Article Table of Contents above</a>
