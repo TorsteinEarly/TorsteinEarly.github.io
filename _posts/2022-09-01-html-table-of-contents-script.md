@@ -19,7 +19,7 @@ tags: [powershell, html, kb, ]
 </ul>
 <br><br><br>
 
-<h2>Quickly Generate a Table of Contents for HTML pages via PowerShell<a id="Who,What,When,Where,2" name="Who,What,When,Where,2"></a></h2></p>
+<h2>Quickly Generate a Table of Contents for HTML pages via PowerShell<a id="Who,What,When,Where,2" name="Who,What,When,Where,2"></a></h2>
 
 - **Who:** Web Devs and Knowledge Base Article Authors
 - **What:** 
