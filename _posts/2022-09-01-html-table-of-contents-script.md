@@ -24,7 +24,7 @@ tags: [powershell, html, kb, ]
 - **Who:** Web Devs and Knowledge Base Article Authors
 - **What:** 
   - A PowerShell Script for making HTML Table of Contents.
-  - In goes a list of headings | Out goes HTML code for a Table of Content and coroponding linked/anchored Section Headings. 
+  - In goes a list of headings > Out goes HTML code for a Table of Content and coroponding linked/anchored Section Headings. 
   - [See this Walkthrough explaining how it works](/assets/posts/html_toc/script_kb_example)
 - **Why:** 
   - It saves you time that would otherwise be spent on formatting, copying, pasting, anchoring, linking, multiple times over multiple headings. 
